@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BookDemo
+{
+    public class Book
+    {
+        //полета
+        private string autor; //автор на книга
+        private string title; //заглавие на книга
+        public string publisher; //издателство
+        readonly int year;        //година на издаване
+        private int total;       //общ брой екземпляри
+        public string library;
+        public const int size= 2;
+
+        //празен конструктор
+        public Book()
+        {
+            library = "PMG Pazardzhik";
+        }
+        //конструктор с параметри
+        public Book(string title, int total)
+        {
+            this.title = title;
+            this.total = total;
+        }
+        //property
+        public string Title
+        {
+            get { return this.title; }
+            set { this.title = value; } 
+        }
+        public int Total { get; set; }
+        
+
+    }
+}
